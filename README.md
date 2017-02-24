@@ -1,3 +1,5 @@
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A)
+
 # ShortLink
 ShortLink is a Simple URL Shortening script. It is based from PHP-URL-Shortener of Brian Cray.
 
