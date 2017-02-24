@@ -12,7 +12,7 @@ ShortLink is a Simple URL Shortening script. It is based from PHP-URL-Shortener 
 - Apache Server
 
 # Installation
-1) Upload all files to your web root.
-2) Create new MySQL Database.
-3) Set your MySQL credentials at `inc/vars.php`.
-4) Set your web root in `SHORTLINK_PREFIX` at `inc/vars.php`.
+1. Upload all files to your web root.
+2. Create new MySQL Database.
+3. Set your MySQL credentials at `inc/vars.php`.
+4. Set your web root in `SHORTLINK_PREFIX` at `inc/vars.php`.
