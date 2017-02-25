@@ -5,7 +5,6 @@
         <strong>ShortLink</strong> by <b>azetrix.xyz</b><br>Phoenix Eve C. Aspacio
       </p>
       <p>
-        Supported by:
         <ul style="list-style: none;">
           <li><a style="vertical-align: top; color: #444444;" href="http://bulma.io/"><img style="height: 20px; padding-right: 5px;" src="/img/bulma-logo.png"> Bulma</a></li>
           <li><a style="vertical-align: top; color: #444444;" href="https://m.do.co/c/39c6ad8c42ee"><img style="height: 20px; padding-left: 5px;" src="/img/digitalocean-logo.png"> DigitalOcean</a></li>
