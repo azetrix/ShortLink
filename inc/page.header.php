@@ -1,4 +1,6 @@
-<html style="overflow-x: initial; overflow-y: initial; background-color: #f5f5f5;">
+<html style="overflow-x: initial; overflow-y: initial; background-color: #f5f5f5;" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
  <head>
   <title>ShortLink | URL Shortener</title>
   <style>
@@ -9,27 +11,34 @@
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-   
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/icons/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/icons/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/icons/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/icons/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/icons/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/icons/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/icons/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="/icons/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/icons/favicon-128.png" sizes="128x128" />
+
+  <meta property="og:title" content="ShortLink - azetrix.xyz"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://azetrix.xyz/"/>
+  <meta property="og:image" content="https://azetrix.xyz/logo/banner.jpg"/>
+  <meta property="og:site_name" content="ShortLink - azetrix.xyz"/>
+  <meta property="og:description" content="An open source url shortening service by Phoenix Eve Aspacio."/>
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/logo/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/logo/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/logo/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/logo/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/logo/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/logo/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/logo/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/logo/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/logo/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/logo/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/logo/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/logo/favicon-128.png" sizes="128x128" />
   <meta name="application-name" content="ShortLink"/>
   <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
-  <meta name="msapplication-square70x70logo" content="/icons/mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
+  <meta name="msapplication-TileImage" content="/logo/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/logo/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/logo/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/logo/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/logo/mstile-310x310.png" />
 
  </head>
  <body style="min-width: 800px;">
