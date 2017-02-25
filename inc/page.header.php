@@ -1,4 +1,4 @@
-<html style="overflow-x: initial; overflow-y: initial; background-color: #f5f5f5;" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="en" style="overflow-x: initial; overflow-y: initial; background-color: #f5f5f5;" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
  <head>

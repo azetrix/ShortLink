@@ -38,9 +38,7 @@ include_once('./inc/page.header.php');
    <section class="section">
      <div class="container">
 
- <?php
-echo $url;
- ?>
+ <a href="<?=$url;?>"><?=$url;?></a>
 
 </div>
 </section>
