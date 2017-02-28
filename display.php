@@ -10,7 +10,9 @@ if(isset($_COOKIE['BL'])) {
     setcookie('BL', '', '0', '/');
 }
 if(!isset($EM) && $EM != '00' && !isset($BL)) {
+    setcookie('EM', '10', '0', '/');
     header('Location: /');
+  	exit;
 }
 $SLComplete = SHORTLINK_PREFIX.$BL;
 include_once('./inc/page.header.php');

@@ -80,6 +80,13 @@ if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) {
     //echo "We only accept dashes and aplphanumeric characters.";
     exit;
   }
+
+  if($shortLink->is_profane($_POST['customcode'])) {
+    setcookie('EM','11', '0', '/');
+    header('Location: /');
+    //echo "This ShortLink has been blocked.";
+    exit;
+  }
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" || !empty($_POST["url"])) {

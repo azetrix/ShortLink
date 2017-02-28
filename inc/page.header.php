@@ -1,4 +1,10 @@
-<html lang="en" style="overflow-x: initial; overflow-y: initial; background-color: #f5f5f5;" xmlns="http://www.w3.org/1999/xhtml"
+<?php
+if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header.php")) {
+    setcookie('EM', '09', '0', '/');
+    header('Location: /');
+  	exit;
+}
+?><html lang="en" style="overflow-x: initial; overflow-y: initial; background-color: #f5f5f5;" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
  <head>
@@ -11,14 +17,14 @@
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
+   
   <meta property="og:title" content="ShortLink - azetrix.xyz"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://azetrix.xyz/"/>
   <meta property="og:image" content="https://azetrix.xyz/logo/banner.jpg"/>
   <meta property="og:site_name" content="ShortLink - azetrix.xyz"/>
   <meta property="og:description" content="An open source url shortening service by Phoenix Eve Aspacio."/>
-
+   
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/logo/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/logo/apple-touch-icon-114x114.png" />
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/logo/apple-touch-icon-72x72.png" />

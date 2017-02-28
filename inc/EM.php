@@ -1,4 +1,9 @@
 <?php
+if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("EM.php")) {
+    setcookie('EM', '09', '0', '/');
+    header('Location: /');
+  	exit;
+}
 if(isset($EM)) {
   if($EM == '01') {
     echo '<div class="msg2f"><hr><article class="message is-danger">
@@ -96,6 +101,29 @@ if(isset($EM)) {
       </div>
       <div class="message-body">
       ShortLink does not exist.
+      </div>
+      </div></article>';
+  }
+  if($EM == '10') {
+    echo '<div class="msg2f"><hr><article class="message is-danger">
+      <div class="message-header">
+      <p><strong>Invalid Action</strong>!</p>
+      <button class="delete"></button>
+      </div>
+      <div class="message-body">
+      Your actions are not applicable.
+      </div>
+      </div></article>';
+  }
+  if($EM == '11') {
+    echo '<div class="msg2f"><hr><article class="message is-danger">
+      <div class="message-header">
+      <p><strong>Forbidden ShortLink</strong>!</p>
+      <button class="delete"></button>
+      </div>
+      <div class="message-body">
+      This ShortLink has been banned by the Administrator for some reason.
+      If you think we\'ve made a mistake, please contact us at "abuse [at] phoenixpeca [dot] xyz"
       </div>
       </div></article>';
   }

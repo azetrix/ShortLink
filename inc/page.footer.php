@@ -1,4 +1,10 @@
-<footer class="footer">
+<?php
+if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.footer.php")) {
+    setcookie('EM', '09', '0', '/');
+    header('Location: /');
+  	exit;
+}
+?><footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p>

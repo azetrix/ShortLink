@@ -9,6 +9,12 @@
  * different, it was orignally inspired by the URL shortener written by
  * Brian Cray - http://briancray.com/posts/free-php-url-shortener-script
  */
+
+if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("ShortLink.php")) {
+    setcookie('EM', '09', '0', '/');
+    header('Location: /');
+  	exit;
+}
 class ShortLink
 {
     /**
@@ -124,6 +130,24 @@ class ShortLink
         }
 
         return $urlRow["long_url"];
+    }
+
+    public function is_profane($shortl) {
+      global $kw_blacklist;
+      if (empty($shortl)) {
+        throw new \Exception("Invalid Argument: ShortLink is empty.");
+      }
+      $profane = false;
+      if (isset($kw_blacklist)) {
+        foreach ($kw_blacklist as $kw) {
+          if(!empty($kw) && !is_null($kw)) {
+            if (strpos(strtolower($shortl), strtolower($kw)) !== FALSE) {
+                $profane = true;
+            }
+          }
+        }
+      }
+      return $profane;
     }
 
     /**
