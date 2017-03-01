@@ -52,6 +52,13 @@ if(!$shortLink->validateUrlFormat($_POST['url'])) {
 	exit;
 }
 
+if($shortLink->is_profane($_POST['url'], 'domain')) {
+  setcookie('EM','12', '0', '/');
+  header('Location: /');
+  //echo "This ShortLink has been blocked.";
+  exit;
+}
+
 if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) {
   if($shortLink->codeExistsInDb($_POST['customcode'])) {
     setcookie('EM','05', '0', '/');
@@ -81,7 +88,7 @@ if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) {
     exit;
   }
 
-  if($shortLink->is_profane($_POST['customcode'])) {
+  if($shortLink->is_profane($_POST['customcode'], 'keyword')) {
     setcookie('EM','11', '0', '/');
     header('Location: /');
     //echo "This ShortLink has been blocked.";

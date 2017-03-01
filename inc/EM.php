@@ -123,7 +123,19 @@ if(isset($EM)) {
       </div>
       <div class="message-body">
       This ShortLink has been banned by the Administrator for some reason.
-      If you think we\'ve made a mistake, please contact us at "abuse [at] phoenixpeca [dot] xyz"
+      If you think we\'ve made a mistake, please contact us at <a href="mailto:'.CONTACT_EMAIL.'">'.CONTACT_EMAIL.'</a>
+      </div>
+      </div></article>';
+  }
+  if($EM == '12') {
+    echo '<div class="msg2f"><hr><article class="message is-danger">
+      <div class="message-header">
+      <p><strong>Forbidden Domain</strong>!</p>
+      <button class="delete"></button>
+      </div>
+      <div class="message-body">
+      This domain has been banned by the Administrator for some reason.
+      If you think we\'ve made a mistake, please contact us at <a href="mailto:'.CONTACT_EMAIL.'">'.CONTACT_EMAIL.'</a>
       </div>
       </div></article>';
   }

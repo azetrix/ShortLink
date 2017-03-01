@@ -132,17 +132,38 @@ class ShortLink
         return $urlRow["long_url"];
     }
 
-    public function is_profane($shortl) {
-      global $kw_blacklist;
-      if (empty($shortl)) {
-        throw new \Exception("Invalid Argument: ShortLink is empty.");
+    public function is_profane($object, $sltype) {
+      if($sltype != 'keyword' && $sltype != 'domain') {
+        throw new \Exception("Invalid Argument: Object type is unknown.");
       }
       $profane = false;
-      if (isset($kw_blacklist)) {
-        foreach ($kw_blacklist as $kw) {
-          if(!empty($kw) && !is_null($kw)) {
-            if (strpos(strtolower($shortl), strtolower($kw)) !== FALSE) {
-                $profane = true;
+      if($sltype == 'keyword') {
+        global $kw_blacklist;
+        if (empty($object)) {
+          throw new \Exception("Invalid Argument: ShortLink is empty.");
+        }
+        if (isset($kw_blacklist)) {
+          foreach ($kw_blacklist as $kw) {
+            if(!empty($kw) && !is_null($kw)) {
+              if (strpos(strtolower($object), strtolower($kw)) !== FALSE) {
+                  $profane = true;
+              }
+            }
+          }
+        }
+      }
+      if($sltype == 'domain') {
+        $object = parse_url($object)['host'];
+        global $dom_blacklist;
+        if (empty($object)) {
+          throw new \Exception("Invalid Argument: Domain is empty.");
+        }
+        if (isset($dom_blacklist)) {
+          foreach ($dom_blacklist as $dom) {
+            if(!empty($dom) && !is_null($dom)) {
+              if (strpos(strtolower($object), strtolower($dom)) !== FALSE) {
+                  $profane = true;
+              }
             }
           }
         }
