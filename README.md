@@ -11,6 +11,8 @@ This is a modified snapshot of the https://azetrix.xyz/ URL shortening service. 
 - It can  create 42 billion unique URLs in 6 or less characters.
 - It has the ability to create custom links up to 20 Characters.
 - It has a beautiful modern UI.
+- Domain blacklist
+- ShortLink blacklist
 
 
 # Prerequisites
