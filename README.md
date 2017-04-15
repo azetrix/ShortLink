@@ -1,7 +1,9 @@
 # ShortLink
 REINVENTING THE WHEEL
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A)
+> [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A)
+>
+> Please support the development of this application.
 
 ShortLink is a simple URL Shortening script powered purely by PHP.
 This is a modified snapshot of the https://azetrix.xyz/ URL shortening service. Check ShortLink: https://azetrix.xyz/
