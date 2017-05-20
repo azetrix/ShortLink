@@ -31,3 +31,5 @@ Check ShortLink: https://azetrix.xyz/
 2. Create new MySQL Database.
 3. Set your MySQL credentials at `inc/vars.php`.
 4. Set your web root in `SHORTLINK_PREFIX` at `inc/vars.php`.
+5. Set your contact email in `CONTACT_EMAIL` at `inc/vars.php`.
+6. Optionally, you can modify the `$kw_blacklist` (keyword blackist) and `$dom_blacklist` (domain blacklist) at `inc/vars.php` to suit your needs.
