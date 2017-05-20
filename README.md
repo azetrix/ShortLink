@@ -28,8 +28,9 @@ Check ShortLink: https://azetrix.xyz/
 # Installation
 
 1. Upload all files to your web root.
-2. Create new MySQL Database.
-3. Set your MySQL credentials at `inc/vars.php`.
-4. Set your web root in `SHORTLINK_PREFIX` at `inc/vars.php`.
-5. Set your contact email in `CONTACT_EMAIL` at `inc/vars.php`.
-6. Optionally, you can modify the `$kw_blacklist` (keyword blackist) and `$dom_blacklist` (domain blacklist) at `inc/vars.php` to suit your needs.
+2. Rename `sample.htaccess` to `.htaccess` if you're using Apache Server.
+3. Create new MySQL Database.
+4. Set your MySQL credentials at `inc/vars.php`.
+5. Set your web root in `SHORTLINK_PREFIX` at `inc/vars.php`.
+6. Set your contact email in `CONTACT_EMAIL` at `inc/vars.php`.
+7. Optionally, you can modify the `$kw_blacklist` (keyword blackist) and `$dom_blacklist` (domain blacklist) at `inc/vars.php` to suit your needs.
