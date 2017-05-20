@@ -20,7 +20,7 @@ include_once('./inc/page.header.php');
               <h2 class="title">Create a ShortLink</h2>
               <label class="label">Enter URL *</label>
               <p style="border-bottom: 1px solid #f1f1f1; padding-bottom: 15px;" class="control has-icon has-addons">
-                <input style="min-width: 90%;" class="input" type="text" required name="url" id="url" placeholder="http://phenomena.nationalgeographic.com/2016/06/28/you-can-help-make-maps-for-science-no-experience-needed/">
+                <input autocomplete="off" style="min-width: 90%;" class="input" type="text" required name="url" id="url" placeholder="http://phenomena.nationalgeographic.com/2016/06/28/you-can-help-make-maps-for-science-no-experience-needed/">
                 <span style="margin-top: -1px;" class="icon">
                   <i class="fa fa-chain"></i>
                 </span>
@@ -32,7 +32,7 @@ include_once('./inc/page.header.php');
 
                     <label class="label">Custom ShortLink</label>
                     <p class="control has-icon">
-                      <input style="max-width: 100%;" class="input" type="text" name="customcode" id="customcode" placeholder="Maps4Science">
+                      <input autocomplete="off" style="max-width: 100%;" class="input" type="text" name="customcode" id="customcode" placeholder="Maps4Science">
                       <span style="margin-top: -1px;" class="icon">
                         <i class="fa fa-pencil-square-o"></i>
                       </span>

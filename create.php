@@ -59,7 +59,7 @@ if($shortLink->is_profane($_POST['url'], 'domain')) {
   exit;
 }
 
-if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) {
+if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) { // if custom code is set
   if($shortLink->codeExistsInDb($_POST['customcode'])) {
     setcookie('EM','05', '0', '/');
     header('Location: /');

@@ -4,6 +4,7 @@
  * decode shortened URLs.
  *
  * @author Alex Fraundorf - AffordableWebSitePublishing.com LLC
+ * @author Phoenix Eve Aspacio - Phoenix Peca
  *
  * Give credit where it is due: Although this package is significantly
  * different, it was orignally inspired by the URL shortener written by
@@ -145,7 +146,7 @@ class ShortLink
         if (isset($kw_blacklist)) {
           foreach ($kw_blacklist as $kw) {
             if(!empty($kw) && !is_null($kw)) {
-              if (strpos(strtolower($object), strtolower($kw)) !== FALSE) {
+              if (fnmatch(strtolower($kw), strtolower($object)) !== FALSE) {
                   $profane = true;
               }
             }
@@ -161,7 +162,7 @@ class ShortLink
         if (isset($dom_blacklist)) {
           foreach ($dom_blacklist as $dom) {
             if(!empty($dom) && !is_null($dom)) {
-              if (strpos(strtolower($object), strtolower($dom)) !== FALSE) {
+              if (fnmatch(strtolower($dom), strtolower($object)) !== FALSE) {
                   $profane = true;
               }
             }
@@ -178,7 +179,20 @@ class ShortLink
      * @return boolean whether URL is a valid format
      */
     public function validateUrlFormat($url) {
-        return filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED);
+      if (false === filter_var($url, FILTER_VALIDATE_URL)) {
+          $host = parse_url($url, PHP_URL_HOST);
+          $ipv6 = trim($host, '[]');
+          if (false === filter_var($ipv6, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+              return false;
+          } else {
+              $newUrl = str_replace($host, 'www.example.com', $url);
+              if (false === filter_var($newUrl, FILTER_VALIDATE_URL)) {
+                  return false;
+              }
+          }
+      }
+
+      return true;
     }
 
     /* Check to see if the URL exists
