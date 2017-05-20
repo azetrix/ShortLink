@@ -6,7 +6,7 @@ REINVENTING THE WHEEL
 > Please support the development of this application.
 
 ShortLink is a simple URL Shortening script powered purely by PHP.
-This is a modified snapshot of the https://azetrix.xyz/ URL shortening service. Check ShortLink: https://azetrix.xyz/
+Check ShortLink: https://azetrix.xyz/
 
 
 # Features
