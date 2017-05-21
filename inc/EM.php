@@ -67,7 +67,7 @@ if(isset($EM)) {
       <button class="delete"></button>
       </div>
       <div class="message-body">
-      Custom ShortLink is must be less than 20 characters.
+      Custom ShortLink must be less than 20 characters.
       </div>
       </div></article>';
   }

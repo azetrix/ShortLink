@@ -35,13 +35,16 @@ catch (\Exception $e) {
 include_once('./inc/page.header.php');
 ?>
 
-   <section class="section">
+   <section class="section main">
      <div class="container">
-
- <a href="<?=$url;?>"><?=$url;?></a>
-
+       <div class="column">
+         <div class="box">
+       <a href="<?=$url;?>"><?=$url;?></a>
+     </div>
+     </div>
+     </div>
+    </section>
 </div>
-</section>
 
 <?php
 include_once('./inc/page.footer.php');

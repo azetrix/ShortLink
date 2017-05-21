@@ -5,8 +5,8 @@ define("DB_DATABASE", "tiny");
 define("DB_USERNAME", "root");
 define("DB_PASSWORD", "");
 
-define("SHORTLINK_PREFIX", "http://localhost/"); // with trailing slash
-define("CONTACT_EMAIL", "abuse@phoenixpeca.xyz"); // please provide a valid email
+define("SHORTLINK_PREFIX", "http://".$_SERVER['SERVER_NAME']."/"); // with trailing slash
+define("CONTACT_EMAIL", "abuse@".$_SERVER['SERVER_NAME']); // please provide a valid email
 
 // Any ShortLink that matches with the keys of this array will be blocked. - ACCEPTS SHELL WILDCARD PATTERNS
 $kw_blacklist = array (
@@ -46,5 +46,7 @@ $dom_blacklist = array (
 '*bitch*',
 '*homo*',
 '*horny*',
-'*virgin*'
+'*virgin*',
+'localhost',
+$_SERVER['SERVER_NAME']
 );
