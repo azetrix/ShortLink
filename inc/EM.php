@@ -139,4 +139,15 @@ if(isset($EM)) {
       </div>
       </div></article>';
   }
+  if(reCAPTCHA_ENABLED && $EM == '13') {
+    echo '<div class="msg2f"><hr><article class="message is-danger">
+      <div class="message-header">
+      <p><strong>Verification Failed</strong>!</p>
+      <button class="delete"></button>
+      </div>
+      <div class="message-body">
+      The verification system could not verify that you\'re not a robot. Please try again.
+      </div>
+      </div></article>';
+  }
 }

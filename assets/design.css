@@ -137,3 +137,12 @@
 .donate img {
   margin: 0px 37px 0px 37px;
 }
+
+@media screen and (min-width: 1200px) {
+  .sbs {
+    display: flex !important;
+  }
+  .SL {
+    width: 300px !important;
+  }
+}

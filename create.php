@@ -1,6 +1,7 @@
 <?php
 include('./inc/vars.php');
 include('./inc/ShortLink.php');
+include('./inc/reCAPTCHA/autoload.php');
 
 try {
     $pdo = new PDO(DB_PDODRIVER . ":host=" . DB_HOST . ";dbname=" . DB_DATABASE, DB_USERNAME, DB_PASSWORD);
@@ -96,6 +97,24 @@ if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) { // if custom 
   }
 }
 
+if(reCAPTCHA_ENABLED) {
+  if(!isset($_POST['g-recaptcha-response'])) {
+    setcookie('EM','13', '0', '/');
+    header('Location: /');
+    //echo "Verification failed.";
+    exit;
+  }
+
+  $recaptcha = new \ReCaptcha\ReCaptcha(reCAPTCHA_SECRETKEY);
+  $$recaptcha_resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+  if(!$$recaptcha_resp->isSuccess()) {
+    setcookie('EM','13', '0', '/');
+    header('Location: /');
+    //echo "Verification failed.";
+    exit;
+  }
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" || !empty($_POST["url"])) {
     if (isset($_POST["customcode"]) && !empty($_POST["customcode"])) {
         $code = $shortLink->urlToShortCode($_POST["url"], $_POST["customcode"]);
@@ -103,6 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || !empty($_POST["url"])) {
         $code = $shortLink->urlToShortCode($_POST["url"]);
     }
 }
+
 setcookie('EM', '00', '0', '/');
 setcookie('BL', $code, '0', '/');
 header('Location: /display.php');
