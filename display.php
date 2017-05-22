@@ -25,9 +25,9 @@ include_once('./inc/page.header.php');
               <h2 class="title">ShortLink Created</h2>
               <label class="label">ShortLink URL</label>
               <p class="control has-icon has-addons">
-                <input class="url-code-block" id="Rlink" value="<?php echo $SLComplete; ?>" readonly="true">
+                <input class="url-code-block" id="Rlink" value="<?=htmlspecialchars($SLComplete);?>" readonly="true">
                 <button class="button is-info copy" data-copytarget="#Rlink">copy</button>
-                <a href="<?php echo $SLComplete; ?>"><button class="button is-primary copy">open</button></a>
+                <a href="<?=htmlspecialchars($SLComplete);?>"><button class="button is-primary copy">open</button></a>
               </p>
 
             </div>

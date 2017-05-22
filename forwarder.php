@@ -39,7 +39,7 @@ include_once('./inc/page.header.php');
     <div class="container">
       <div class="column">
         <div class="box">
-          <a href="<?=$url;?>"><?=$url;?></a>
+          <a href="<?=htmlspecialchars($url);?>"><?=htmlspecialchars($url);?></a>
         </div>
       </div>
     </div>
