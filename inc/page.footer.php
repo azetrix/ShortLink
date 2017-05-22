@@ -7,7 +7,7 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.footer
 ?>    <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <span><strong>ShortLink</strong> by <b>azetrix.xyz</b><br>Phoenix Eve C. Aspacio</span>
+          <span><a style="color: #999999;" href="https://github.com/azetrix/ShortLink"><b>ShortLink</b></a><br><i>Keith Joshua v0.1.0</i></span>
         </div>
       </div>
     </footer>

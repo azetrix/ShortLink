@@ -9,8 +9,8 @@ define("SHORTLINK_PREFIX", "http://".$_SERVER['SERVER_NAME']."/"); // with trail
 define("CONTACT_EMAIL", "abuse@".$_SERVER['SERVER_NAME']); // please provide a valid email
 
 define("reCAPTCHA_ENABLED", false); // true or false; reCAPTCHA integration is an optional feature
-define("reCAPTCHA_SITEKEY", ""); // please obtain your site key at https://www.google.com/recaptcha/admin and set reCAPTCHA_ENABLED to true
-define("reCAPTCHA_SECRETKEY", ""); // please obtain your secret key at https://www.google.com/recaptcha/admin and set reCAPTCHA_ENABLED to true
+define("reCAPTCHA_SITEKEY", "ADD_YOUR_SITE_KEY_HERE"); // please obtain your site key at https://www.google.com/recaptcha/admin and set reCAPTCHA_ENABLED to true
+define("reCAPTCHA_SECRETKEY", "ADD_YOUR_SECRET_KEY_HERE"); // please obtain your secret key at https://www.google.com/recaptcha/admin and set reCAPTCHA_ENABLED to true
 define("reCAPTCHA_LANG", "en"); // reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language and set reCAPTCHA_ENABLED to true
 
 // Any ShortLink that matches with the keys of this array will be blocked. - ACCEPTS SHELL WILDCARD PATTERNS

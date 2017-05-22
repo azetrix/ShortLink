@@ -1,5 +1,5 @@
 # ShortLink
-[![GitHub release](https://img.shields.io/badge/style-v0.0.1-blue.svg?style=flat&label=Release)](https://github.com/azetrix/ShortLink/releases/tag/v0.0.1)
+[![GitHub release](https://img.shields.io/badge/style-v0.1.0-blue.svg?style=flat&label=Release)](https://github.com/azetrix/ShortLink/releases/tag/v0.1.0)
 [![AUR](https://img.shields.io/badge/style-GPL--3.0-blue.svg?style=flat&label=License)](https://github.com/azetrix/ShortLink/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/style-yes-green.svg?style=flat&label=Maintained)](https://github.com/azetrix/ShortLink)
 [![Donate](https://img.shields.io/badge/style-PayPal-green.svg?style=flat&label=Donate)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A)
