@@ -140,9 +140,6 @@ class ShortLink
       $profane = false;
       if($sltype == 'keyword') {
         global $kw_blacklist;
-        if (empty($object)) {
-          throw new \Exception("Invalid Argument: ShortLink is empty.");
-        }
         if (isset($kw_blacklist)) {
           foreach ($kw_blacklist as $kw) {
             if(!empty($kw) && !is_null($kw)) {
@@ -156,9 +153,6 @@ class ShortLink
       if($sltype == 'domain') {
         $object = parse_url($object)['host'];
         global $dom_blacklist;
-        if (empty($object)) {
-          throw new \Exception("Invalid Argument: Domain is empty.");
-        }
         if (isset($dom_blacklist)) {
           foreach ($dom_blacklist as $dom) {
             if(!empty($dom) && !is_null($dom)) {
