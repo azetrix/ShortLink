@@ -96,11 +96,11 @@ if(isset($EM)) {
   if($EM == '09') {
     echo '<div class="msg2f"><hr><article class="message is-danger">
       <div class="message-header">
-      <p><strong>Invalid ShortLink</strong>!</p>
+      <p><strong>Protected ShortLink</strong>!</p>
       <button class="delete"></button>
       </div>
       <div class="message-body">
-      ShortLink does not exist.
+      ShortLink has been disabled by default.
       </div>
       </div></article>';
   }

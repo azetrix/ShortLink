@@ -9,10 +9,17 @@ if(isset($_COOKIE['BL'])) {
     $BL = $_COOKIE['BL'];
     setcookie('BL', '', '0', '/');
 }
-if(!isset($EM) && $EM != '00' && !isset($BL)) {
+if(!isset($EM) && $EM != '00') {
+    setcookie('EM', '09', '0', '/');
+    header('Location: /');
+    //echo "Protected ShortLink";
+  	exit;
+}
+if(!isset($BL)) {
     setcookie('EM', '10', '0', '/');
     header('Location: /');
-  	exit;
+    //echo "Actions N/A";
+    exit;
 }
 $SLComplete = SHORTLINK_PREFIX.$BL;
 include_once('./inc/page.header.php');
