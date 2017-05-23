@@ -7,7 +7,7 @@ $forwardSC = ltrim(rtrim(preg_replace('~/+~', '/', trim(strtok($_SERVER['REQUEST
 if($forwardSC == 'forwarder.php') {
     setcookie('EM', '09', '0', '/');
     header('Location: /');
-    //echo "Protected ShortLink";
+    //echo "Access Denied";
   	exit;
 }
 
@@ -29,9 +29,7 @@ try {
 }
 catch (\Exception $e) {
     header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
-    setcookie('EM', '09', '0', '/');
-    //header('Location: /');
-    //echo "ShortLink does not exist";
+    include_once('./inc/page.not_found.php');
     exit;
 
 }

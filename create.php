@@ -25,7 +25,21 @@ catch (\PDOException $e) {
   exit;
 }
 
+if(preg_match("/[^a-z\-0-9]/i", $_POST['customcode'])) {
+  setcookie('EM','08', '0', '/');
+  header('Location: /');
+  //echo "We only accept dashes and aplphanumeric characters.";
+  exit;
+}
+
 $shortLink = new ShortLink($pdo);
+
+if(!isset($_POST['token']) || empty($_POST['token'])) {
+  setcookie('EM','09', '0', '/');
+  header('Location: /');
+	//echo "Access Denied";
+	exit;
+}
 
 if(!isset($_POST['url'])) {
   setcookie('EM','01', '0', '/');

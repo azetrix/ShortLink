@@ -12,7 +12,7 @@ if(isset($_COOKIE['BL'])) {
 if(!isset($EM) && $EM != '00') {
     setcookie('EM', '09', '0', '/');
     header('Location: /');
-    //echo "Protected ShortLink";
+    //echo "Access Denied";
   	exit;
 }
 if(!isset($BL)) {

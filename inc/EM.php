@@ -96,11 +96,11 @@ if(isset($EM)) {
   if($EM == '09') {
     echo '<div class="msg2f"><hr><article class="message is-danger">
       <div class="message-header">
-      <p><strong>Protected ShortLink</strong>!</p>
+      <p><strong>Access Denied</strong>!</p>
       <button class="delete"></button>
       </div>
       <div class="message-body">
-      ShortLink has been disabled by default.
+      Your access to this URI has been identified as unauthorized.
       </div>
       </div></article>';
   }
