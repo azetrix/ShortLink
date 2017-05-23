@@ -3,13 +3,6 @@ include('./inc/vars.php');
 include('./inc/ShortLink.php');
 include('./inc/reCAPTCHA/autoload.php');
 
-$uri_data = ltrim(rtrim(preg_replace('~/+~', '/', trim(strtok($_SERVER['REQUEST_URI'], '?'))), '/'), '/');
-if($uri_data == 'create.php') {
-    setcookie('EM', '10', '0', '/');
-    header('Location: /');
-  	exit;
-}
-
 try {
     $pdo = new PDO(DB_PDODRIVER . ":host=" . DB_HOST . ";dbname=" . DB_DATABASE, DB_USERNAME, DB_PASSWORD);
     $pdo->exec("CREATE TABLE IF NOT EXISTS short_links (
