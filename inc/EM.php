@@ -150,4 +150,16 @@ if(isset($EM)) {
       </div>
       </div></article>';
   }
+  if($EM == '14') {
+    echo '<div class="msg2f"><hr><article class="message is-danger">
+      <div class="message-header">
+      <p><strong>Server Error</strong>!</p>
+      <button class="delete"></button>
+      </div>
+      <div class="message-body">
+      The server could not connect to the database.
+      Please contact us at <a href="mailto:'.CONTACT_EMAIL.'">'.CONTACT_EMAIL.'</a>
+      </div>
+      </div></article>';
+  }
 }

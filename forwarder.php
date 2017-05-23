@@ -15,8 +15,10 @@ try {
         DB_USERNAME, DB_PASSWORD);
 }
 catch (\PDOException $e) {
-    echo $e;
-    exit;
+  setcookie('EM', '14', '0', '/');
+  header('Location: /');
+  //echo "Database connection failed";
+  exit;
 }
 
 $shortLink = new ShortLink($pdo);

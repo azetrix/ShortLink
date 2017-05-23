@@ -52,6 +52,5 @@ $dom_blacklist = array (
 '*homo*',
 '*horny*',
 '*virgin*',
-'localhost',
 $_SERVER['SERVER_NAME']
 );

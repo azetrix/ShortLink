@@ -19,8 +19,10 @@ try {
 ENGINE=InnoDB COLLATE=latin1_general_cs;");
 }
 catch (\PDOException $e) {
-    echo $e;
-    exit;
+  setcookie('EM', '14', '0', '/');
+  header('Location: /');
+  //echo "Database connection failed";
+  exit;
 }
 
 $shortLink = new ShortLink($pdo);
