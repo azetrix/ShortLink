@@ -13,6 +13,8 @@ define("reCAPTCHA_SITEKEY", "ADD_YOUR_SITE_KEY_HERE"); // please obtain your sit
 define("reCAPTCHA_SECRETKEY", "ADD_YOUR_SECRET_KEY_HERE"); // please obtain your secret key at https://www.google.com/recaptcha/admin and set reCAPTCHA_ENABLED to true
 define("reCAPTCHA_LANG", "en"); // reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language and set reCAPTCHA_ENABLED to true
 
+define("FORWADER_PREVIEW", true); // enabling this feature prevents automatic redirection to malicious websites; toggling this feature requires clearing of cache
+
 // Any ShortLink that matches with the keys of this array will be blocked. - ACCEPTS SHELL WILDCARD PATTERNS
 $kw_blacklist = array (
 '*--*',

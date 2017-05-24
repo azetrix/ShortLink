@@ -34,6 +34,12 @@ catch (\Exception $e) {
 
 }
 
+if(!FORWADER_PREVIEW) {
+    header($_SERVER["SERVER_PROTOCOL"]." 301 Moved Permanently"); 
+    header('Location: '.$url);
+  	exit;
+}
+
 include_once('./inc/page.header.php');
 ?>
 
