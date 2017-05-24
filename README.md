@@ -11,12 +11,14 @@ Check ShortLink: https://azetrix.xyz/
 
 # Features
 
-- It can create `15.625` billion unique URLs in 6 Characters.
+- It can create up to `15.625` billion unique URLs in 6 characters.
 - It has the ability to create custom links up to 20 Characters.
 - It has a beautiful modern UI. Powered by [Bulma CSS](http://bulma.io/).
 - Domain blacklist with shell wildcard support.
-- ShortLink blacklist with shell wildcard support
-
+- ShortLink blacklist with shell wildcard support.
+- Google reCAPTCHA integration is now built-in.
+- Supports link preview and force redirection.
+- Predefined blacklist for inappropriate domains and custom ShortLinks.
 
 # Prerequisites
 
