@@ -6,3 +6,4 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.not_fo
   	exit;
 }
 ?>
+SHORTLINK NOT FOUND
