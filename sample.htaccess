@@ -3,3 +3,6 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*) forwarder.php [L]
+Options -Indexes
+ErrorDocument 404 "Your ShortLink installation have been unsuccessful."
+ErrorDocument 403 "Your access to this URI has been identified as unauthorized."
