@@ -11,8 +11,7 @@ include_once('./inc/page.header.php');
         <div class="container">
           <div class="column">
             <div class="box">
-               <h2 class="title">NOT FOUND<br><br>
-               The ShortLink that you are looking for could not be found.</h2>
+              <iframe src="https://notfound-static.fwebservices.be/404/index.html?&amp;key=421aa90e079fa326b6494f812ad13e79" width="100%" height="650" frameborder="0"></iframe>
              </div>
            </div>
          </div>

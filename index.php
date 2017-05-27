@@ -19,7 +19,7 @@ include_once('./inc/page.header.php');
          <form action="create.php" method="post">
           <input readonly="true" style="display: none;" name="token" value="<?=bin2hex(openssl_random_pseudo_bytes(10));?>">
           <h2 class="title">Create a ShortLink</h2>
-          <label class="label">Enter URL <span title="Required" style="color: red;">*</span></label>
+          <label title="Required" class="label">Enter URL <span style="color: red;">*</span></label>
           <p style="border-bottom: 1px solid #f1f1f1; padding-bottom: 15px;" class="control has-icon has-addons">
             <input autocomplete="off" style="min-width: 90%;" class="input" type="text" required name="url" id="url" placeholder="http://phenomena.nationalgeographic.com/2016/06/28/you-can-help-make-maps-for-science-no-experience-needed/">
             <span style="margin-top: -1px;" class="icon">
@@ -31,7 +31,7 @@ include_once('./inc/page.header.php');
           <div style="display: flex;" class="columns">
             <div class="sbs">
               <div style="width: 325px; flex: none;" class="column SL">
-                  <label class="label">Custom ShortLink</label>
+                  <label title="Optional" class="label">Custom ShortLink</label>
                   <p class="control has-icon">
                     <input autocomplete="off" style="max-width: 100%;" class="input" type="text" name="customcode" id="customcode" placeholder="Maps4Science">
                     <span style="margin-top: -1px;" class="icon">
@@ -47,7 +47,7 @@ include_once('./inc/page.header.php');
               </div>
               <?php if(reCAPTCHA_ENABLED): ?>
               <div style="width: 325px; flex: none;" class="column">
-                <label class="label">Verify Yourself <span title="Required" style="color: red;">*</span></label>
+                <label title="Required" class="label">Verify Yourself <span style="color: red;">*</span></label>
                 <div class="g-recaptcha" data-sitekey="<?=reCAPTCHA_SITEKEY;?>"></div></script>
               </div>
               <?php endif; ?>
