@@ -33,6 +33,7 @@ if(preg_match("/[^a-z\-0-9]/i", $_POST['customcode'])) {
 }
 
 $shortLink = new ShortLink($pdo);
+$pass = false;
 
 if(!isset($_POST['token']) || empty($_POST['token'])) {
   setcookie('EM','09', '0', '/');
@@ -78,10 +79,10 @@ if($shortLink->is_profane($_POST['url'], 'domain')) {
 
 if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) { // if custom code is set
   if($shortLink->codeExistsInDb($_POST['customcode']) && $shortLink->shortCodeToUrl($_POST['customcode']) != $_POST['url']) {
-    setcookie('EM','05', '0', '/');
-    header('Location: /');
+    $pass = true;
+    //header('Location: /');
     //echo "Code is not available.";
-    exit;
+    //exit;
   }
 
   if(strlen($_POST['customcode']) >= 20) {
@@ -132,14 +133,18 @@ if(reCAPTCHA_ENABLED) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" || !empty($_POST["url"])) {
-    if (isset($_POST["customcode"]) && !empty($_POST["customcode"])) {
+    if (isset($_POST["customcode"]) && !empty($_POST["customcode"]) && $pass !== true) {
         $code = $shortLink->urlToShortCode($_POST["url"], $_POST["customcode"]);
     } else {
         $code = $shortLink->urlToShortCode($_POST["url"]);
     }
 }
 
-setcookie('EM', '00', '0', '/');
+if($pass === true) {
+  setcookie('EM', '05', '0', '/');
+} else {
+  setcookie('EM', '00', '0', '/');
+}
 setcookie('BL', $code, '0', '/');
 header('Location: /display.php');
 exit;

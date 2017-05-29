@@ -36,7 +36,9 @@ include_once('./inc/page.header.php');
                 <button class="button is-info copy" data-copytarget="#Rlink">copy</button>
                 <a href="<?=htmlspecialchars($SLComplete);?>"><button class="button is-primary copy">open</button></a>
               </p>
-
+              <?php
+              include_once('./inc/EM.php');
+              ?>
             </div>
           </div>
         </div>

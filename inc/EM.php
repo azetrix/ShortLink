@@ -56,7 +56,7 @@ if(isset($EM)) {
       <button class="delete"></button>
       </div>
       <div class="message-body">
-      Custom ShortLink is already in use.
+      Custom ShortLink is already in use. But we have created a new one for you.
       </div>
       </div></article>';
   }
