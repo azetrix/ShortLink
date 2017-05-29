@@ -1,8 +1,8 @@
 <?php
 if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("EM.php")) {
-    setcookie('EM', '09', '0', '/');
-    header('Location: /');
-  	exit;
+  setcookie('EM', '09', '0', '/');
+  header('Location: /');
+	exit;
 }
 if(isset($EM)) {
   if($EM == '01') {
