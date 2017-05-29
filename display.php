@@ -2,24 +2,24 @@
 include('./inc/vars.php');
 
 if(isset($_COOKIE['EM'])) {
-    $EM = $_COOKIE['EM'];
-    setcookie('EM', '', '0', '/');
+  $EM = $_COOKIE['EM'];
+  setcookie('EM', '', '0', '/');
 }
 if(isset($_COOKIE['BL'])) {
-    $BL = $_COOKIE['BL'];
-    setcookie('BL', '', '0', '/');
+  $BL = $_COOKIE['BL'];
+  setcookie('BL', '', '0', '/');
 }
 if(!isset($EM) && $EM != '00') {
-    setcookie('EM', '09', '0', '/');
-    header('Location: /');
-    //echo "Access Denied";
-  	exit;
+  setcookie('EM', '09', '0', '/');
+  header('Location: /');
+  //echo "Access Denied";
+	exit;
 }
 if(!isset($BL)) {
-    setcookie('EM', '10', '0', '/');
-    header('Location: /');
-    //echo "Actions N/A";
-    exit;
+  setcookie('EM', '10', '0', '/');
+  header('Location: /');
+  //echo "Actions N/A";
+  exit;
 }
 $SLComplete = SHORTLINK_PREFIX.$BL;
 include_once('./inc/page.header.php');
