@@ -59,3 +59,10 @@ for (i = 0; i < close.length; i++) {
         setTimeout(function(){ div.style.display = "none"; }, 600);
     }
 }
+
+// Loading animation on click
+function init_shorten(elem) {
+  if (document.getElementById("url").value != '') {
+    elem.classList.add('is-loading');
+  }
+}
