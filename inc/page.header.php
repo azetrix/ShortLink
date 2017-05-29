@@ -9,13 +9,6 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
   <head>
     <title>ShortLink | URL Shortener</title>
     <link rel="stylesheet" href="/assets/design.css">
-    <script>
-      function init_shorten(elem) {
-        if (document.getElementById("url").value != '') {
-          elem.classList.add('is-loading');
-        }
-      }
-    </script>
     <link rel="stylesheet" href="/assets/bulma.css">
     <link rel="stylesheet" href="/assets/font-awesome.css">
 
