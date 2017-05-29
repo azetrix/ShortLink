@@ -44,6 +44,8 @@
 }
 .design {
   background-image: url('/img/cool-background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 .section {
   background-color: transparent !important;
