@@ -23,7 +23,7 @@ class ShortLink
      *
      * YOU MUST NOT CHANGE THESE ONCE YOU START CREATING SHORTENED URLs!
      */
-    protected static $chars = "123456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
+    protected static $chars = SHORTLINK_CODE_CHARS;
 
     /**
      * @var string holds the name of the database table to use
