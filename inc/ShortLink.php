@@ -86,7 +86,7 @@ class ShortLink
         // }
 
         $codeExists = $this->codeExistsInDb($customScode);
-        if ($codeExists != false) {
+        if ($codeExists != false && $this->shortCodeToUrl($customScode) != $url) {
             throw new \Exception("ShortCode is already in database.");
         }
 

@@ -19,11 +19,11 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
     <link rel="stylesheet" href="/assets/bulma.css">
     <link rel="stylesheet" href="/assets/font-awesome.css">
 
-    <meta property="og:title" content="ShortLink - azetrix.xyz"/>
+    <meta property="og:title" content="ShortLink - <?=$_SERVER['SERVER_NAME']?>"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="<?php echo "http://".$_SERVER['SERVER_NAME']."/"; ?>"/>
     <meta property="og:image" content="<?php echo "http://".$_SERVER['SERVER_NAME']."/"; ?>logo/banner.jpg"/>
-    <meta property="og:site_name" content="ShortLink - azetrix.xyz"/>
+    <meta property="og:site_name" content="ShortLink - <?=$_SERVER['SERVER_NAME']?>"/>
     <meta property="og:description" content="An open source url shortening service by Phoenix Eve Aspacio."/>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/logo/apple-touch-icon-57x57.png" />
@@ -56,7 +56,7 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
              <div style="display: flex;" class="columns">
                <div style="text-align: left;" class="column">
                  <a href="/"><h1 style="font-size: 50px;" class="title">
-                   azetrix.xyz
+                   <?=$_SERVER['SERVER_NAME']?>
                  </h1></a>
                  <h2 class="subtitle">
                    ShortLink <span style="margin-left: 14px; margin-right: 14px;">|</span> URL Shortener

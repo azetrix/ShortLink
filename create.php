@@ -77,7 +77,7 @@ if($shortLink->is_profane($_POST['url'], 'domain')) {
 }
 
 if(isset($_POST['customcode']) AND !empty($_POST['customcode'])) { // if custom code is set
-  if($shortLink->codeExistsInDb($_POST['customcode'])) {
+  if($shortLink->codeExistsInDb($_POST['customcode']) && $shortLink->shortCodeToUrl($_POST['customcode']) != $_POST['url']) {
     setcookie('EM','05', '0', '/');
     header('Location: /');
     //echo "Code is not available.";
