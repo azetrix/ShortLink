@@ -11,6 +11,22 @@ if($forwardSC == 'forwarder.php') {
   	exit;
 }
 
+if(substr($forwardSC, -11) == '/index.html') {
+    $forwardSC = substr($forwardSC, 0, -11);
+}
+if(substr($forwardSC, -10) == '/index.htm') {
+    $forwardSC = substr($forwardSC, 0, -10);
+}
+if(substr($forwardSC, -10) == '/index.php') {
+    $forwardSC = substr($forwardSC, 0, -10);
+}
+if(substr($forwardSC, -11) == '/index.aspx') {
+    $forwardSC = substr($forwardSC, 0, -11);
+}
+if(substr($forwardSC, -10) == '/index.asp') {
+    $forwardSC = substr($forwardSC, 0, -10);
+}
+
 try {
     $pdo = new PDO(DB_PDODRIVER . ":host=" . DB_HOST . ";dbname=" . DB_DATABASE,
         DB_USERNAME, DB_PASSWORD);
@@ -35,7 +51,7 @@ catch (\Exception $e) {
 }
 
 if(!FORWADER_PREVIEW) {
-    header($_SERVER["SERVER_PROTOCOL"]." 301 Moved Permanently"); 
+    header($_SERVER["SERVER_PROTOCOL"]." 301 Moved Permanently");
     header('Location: '.$url);
   	exit;
 }
