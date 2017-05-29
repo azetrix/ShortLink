@@ -45,7 +45,7 @@ if(isset($EM)) {
       <button class="delete"></button>
       </div>
       <div class="message-body">
-      URL must be valid to create a ShortLink.
+      URL must be valid to create a ShortLink. Please include the scheme (`http://`, `https://`, `ftp://`, `mailto:`, etc) in creating ShortLink.
       </div>
       </div></article>';
   }
