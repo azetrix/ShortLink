@@ -39,8 +39,7 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
     <meta name="msapplication-square150x150logo" content="/logo/mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="/logo/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/logo/mstile-310x310.png" />
-    <?php if(reCAPTCHA_ENABLED): ?><script src='https://www.google.com/recaptcha/api.js?hl=<?=reCAPTCHA_LANG?>'></script><?php endif; ?>
-  </head>
+  <?php if(reCAPTCHA_ENABLED): ?>  <script src='https://www.google.com/recaptcha/api.js?hl=<?=reCAPTCHA_LANG?>'></script><?php endif; ?></head>
   <body style="min-width: 800px;">
      <div class="design">
        <section class="hero is-dark">
