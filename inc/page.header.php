@@ -5,7 +5,8 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
   //echo "Access Denied";
 	exit;
 }
-?><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+?><!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
   <head>
     <title>ShortLink | URL Shortener</title>
     <link rel="stylesheet" href="/assets/design.css<?='?'.slugify(FOOTER_TXT);?>">
@@ -56,7 +57,7 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
                </div>
                <div class="column donate">
                  <p>Want to make a <b>donation</b>?</p>
-                 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A"><img src="/img/paypal-donate.svg"></a>
+                 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A"><img alt="Donate Button" src="/img/paypal-donate.svg"></a>
                </div>
             </div>
            </div>
