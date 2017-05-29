@@ -1,7 +1,6 @@
 <?php
-include('./inc/functions.php');
 include('./inc/vars.php');
-include('./inc/ShortLink.php');
+include('./inc/core.php');
 
 $forwardSC = ltrim(rtrim(preg_replace('~/+~', '/', trim(strtok($_SERVER['REQUEST_URI'], '?'))), '/'), '/');
 

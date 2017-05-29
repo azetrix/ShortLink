@@ -1,6 +1,6 @@
 <?php
-include('./inc/functions.php');
 include('./inc/vars.php');
+include('./inc/core.php');
 
 if(isset($_COOKIE['EM'])) {
   $EM = $_COOKIE['EM'];
