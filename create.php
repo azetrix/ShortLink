@@ -4,21 +4,20 @@ include('./inc/ShortLink.php');
 include('./inc/reCAPTCHA/autoload.php');
 
 try {
-    $pdo = new PDO(DB_PDODRIVER . ":host=" . DB_HOST . ";dbname=" . DB_DATABASE, DB_USERNAME, DB_PASSWORD);
-    $pdo->exec("CREATE TABLE IF NOT EXISTS short_links (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  long_url VARCHAR(2000) NOT NULL,
-  short_code VARCHAR(2000) NOT NULL,
-  date_created INTEGER UNSIGNED NOT NULL,
-  counter INTEGER UNSIGNED NOT NULL DEFAULT '0',
-  custom_short_code BOOLEAN NOT NULL DEFAULT FALSE,
+  $pdo = new PDO(DB_PDODRIVER . ":host=" . DB_HOST . ";dbname=" . DB_DATABASE, DB_USERNAME, DB_PASSWORD);
+  $pdo->exec("CREATE TABLE IF NOT EXISTS short_links (
+    id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+    long_url VARCHAR(2000) NOT NULL,
+    short_code VARCHAR(2000) NOT NULL,
+    date_created INTEGER UNSIGNED NOT NULL,
+    counter INTEGER UNSIGNED NOT NULL DEFAULT '0',
+    custom_short_code BOOLEAN NOT NULL DEFAULT FALSE,
 
   PRIMARY KEY (id),
   KEY short_code (short_code)
 )
 ENGINE=InnoDB COLLATE=latin1_general_cs;");
-}
-catch (\PDOException $e) {
+} catch (\PDOException $e) {
   setcookie('EM', '14', '0', '/');
   header('Location: /');
   //echo "Database connection failed";
@@ -133,11 +132,11 @@ if(reCAPTCHA_ENABLED) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" || !empty($_POST["url"])) {
-    if (isset($_POST["customcode"]) && !empty($_POST["customcode"]) && $pass !== true) {
-        $code = $shortLink->urlToShortCode($_POST["url"], $_POST["customcode"]);
-    } else {
-        $code = $shortLink->urlToShortCode($_POST["url"]);
-    }
+  if (isset($_POST["customcode"]) && !empty($_POST["customcode"]) && $pass !== true) {
+    $code = $shortLink->urlToShortCode($_POST["url"], $_POST["customcode"]);
+  } else {
+    $code = $shortLink->urlToShortCode($_POST["url"]);
+  }
 }
 
 if($pass === true) {
