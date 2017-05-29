@@ -1,3 +1,8 @@
+html {
+  overflow-x: initial !important;
+  overflow-y: initial !important;
+  background-color: #f5f5f5 !important;
+}
 .msg2f {
   opacity: 1;
   transition: opacity 0.6s; /* 600ms to fade out */
