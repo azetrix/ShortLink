@@ -1,12 +1,12 @@
 <?php
 include('./inc/vars.php');
 if(isset($_COOKIE['EM'])) {
-    $EM = $_COOKIE['EM'];
-    setcookie('EM', '', '0', '/');
+  $EM = $_COOKIE['EM'];
+  setcookie('EM', '', '0', '/');
 }
 if(isset($_COOKIE['BL'])) {
-    $BL = $_COOKIE['BL'];
-    setcookie('BL', '', '0', '/');
+  $BL = $_COOKIE['BL'];
+  setcookie('BL', '', '0', '/');
 }
 include_once('./inc/page.header.php');
 ?>
