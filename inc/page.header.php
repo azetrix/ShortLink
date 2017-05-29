@@ -1,9 +1,9 @@
 <?php
 if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header.php")) {
-    setcookie('EM', '09', '0', '/');
-    header('Location: /');
-    //echo "Access Denied";
-  	exit;
+  setcookie('EM', '09', '0', '/');
+  header('Location: /');
+  //echo "Access Denied";
+	exit;
 }
 ?><html lang="en" style="overflow-x: initial; overflow-y: initial; background-color: #f5f5f5;" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
   <head>
