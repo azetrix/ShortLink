@@ -1,4 +1,5 @@
 <?php
+include('./inc/functions.php');
 include('./inc/vars.php');
 
 if(isset($_COOKIE['EM'])) {

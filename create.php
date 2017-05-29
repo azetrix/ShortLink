@@ -1,4 +1,5 @@
 <?php
+include('./inc/functions.php');
 include('./inc/vars.php');
 include('./inc/ShortLink.php');
 include('./inc/reCAPTCHA/autoload.php');
