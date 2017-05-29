@@ -18,7 +18,7 @@ include_once('./inc/page.header.php');
       <div class="column">
         <div class="box">
          <form action="/create.php" method="post">
-          <input readonly="true" style="display: none;" name="token" value="<?=bin2hex(openssl_random_pseudo_bytes(10));?>">
+          <input readonly style="display: none;" name="token" value="<?=bin2hex(openssl_random_pseudo_bytes(10));?>">
           <h2 class="title">Create a ShortLink</h2>
           <label title="Required" class="label">Enter URL <span style="color: red;">*</span></label>
           <p style="border-bottom: 1px solid #f1f1f1; padding-bottom: 15px;" class="control has-icon has-addons">
