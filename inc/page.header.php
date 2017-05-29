@@ -12,12 +12,12 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
     <link rel="stylesheet" href="/assets/bulma.css">
     <link rel="stylesheet" href="/assets/font-awesome.css">
 
-    <meta property="og:title" content="ShortLink - <?=$_SERVER['SERVER_NAME']?>"/>
+    <meta property="og:title" content="ShortLink | URL Shortener"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="<?php echo "http://".$_SERVER['SERVER_NAME']."/"; ?>"/>
     <meta property="og:image" content="<?php echo "http://".$_SERVER['SERVER_NAME']."/"; ?>logo/banner.jpg"/>
-    <meta property="og:site_name" content="ShortLink - <?=$_SERVER['SERVER_NAME']?>"/>
-    <meta property="og:description" content="An open source url shortening service by Phoenix Eve Aspacio."/>
+    <meta property="og:site_name" content="ShortLink"/>
+    <meta property="og:description" content="ShortLink is a simple and open-source URL shortening web application."/>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/logo/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/logo/apple-touch-icon-114x114.png" />
