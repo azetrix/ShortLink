@@ -8,9 +8,9 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
 ?><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
   <head>
     <title>ShortLink | URL Shortener</title>
-    <link rel="stylesheet" href="/assets/design.css">
-    <link rel="stylesheet" href="/assets/bulma.css">
-    <link rel="stylesheet" href="/assets/font-awesome.css">
+    <link rel="stylesheet" href="/assets/design.css<?='?'.slugify(FOOTER_TXT);?>">
+    <link rel="stylesheet" href="/assets/bulma.css<?='?'.slugify(FOOTER_TXT);?>">
+    <link rel="stylesheet" href="/assets/font-awesome.css<?='?'.slugify(FOOTER_TXT);?>">
 
     <meta property="og:title" content="ShortLink | URL Shortener"/>
     <meta property="og:type" content="website"/>
