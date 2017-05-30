@@ -6,7 +6,7 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
 	exit;
 }
 ?><!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<html lang="en">
   <head>
     <title>ShortLink | URL Shortener</title>
     <link rel="stylesheet" href="/assets/design.css<?='?'.slugify(FOOTER_TXT);?>">
@@ -19,6 +19,9 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.header
     <meta property="og:image" content="<?php echo "http://".$_SERVER['SERVER_NAME']."/"; ?>logo/banner.jpg"/>
     <meta property="og:site_name" content="ShortLink"/>
     <meta property="og:description" content="ShortLink is a simple and open-source URL shortening web application."/>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/logo/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/logo/apple-touch-icon-114x114.png" />
