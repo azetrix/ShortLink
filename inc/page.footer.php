@@ -3,7 +3,7 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.footer
   setcookie('EM', '09', '0', '/');
   header('Location: /');
   //echo "Access Denied";
-	exit;
+  exit;
 }
 ?>    <footer class="footer">
       <div class="container">
