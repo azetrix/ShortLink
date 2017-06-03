@@ -17,7 +17,7 @@ define("SHORTLINK_CODE_CHARS", "123456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWX
 
 define("FORWADER_PREVIEW", true); // enabling this feature prevents automatic redirection to malicious websites; toggling this feature requires clearing of cache
 
-define("FOOTER_TXT", 'Keith Joshua v0.1.0'); // footer text
+define("FOOTER_TXT", 'Princess Jhia v0.1.5'); // footer text
 
 // Any ShortLink that matches with the keys of this array will be blocked. - ACCEPTS SHELL WILDCARD PATTERNS
 $kw_blacklist = array (
