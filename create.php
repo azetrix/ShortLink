@@ -8,7 +8,7 @@ try {
   $pdo->exec("CREATE TABLE IF NOT EXISTS short_links (
     id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
     long_url VARCHAR(2000) NOT NULL,
-    short_code VARCHAR(2000) NOT NULL,
+    short_code VARCHAR(2000) NOT NULL DEFAULT '',
     date_created INTEGER UNSIGNED NOT NULL,
     counter INTEGER UNSIGNED NOT NULL DEFAULT '0',
     custom_short_code BOOLEAN NOT NULL DEFAULT FALSE,
