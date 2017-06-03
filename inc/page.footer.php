@@ -13,5 +13,6 @@ if(strtolower(basename($_SERVER["SCRIPT_FILENAME"])) === strtolower("page.footer
       </div>
     </footer>
     <script type="text/javascript" src="/assets/design.js<?='?'.slugify(FOOTER_TXT);?>"></script>
+    <script type="text/javascript" id="cookiebanner" src="/assets/cookiebanner.js<?='?'.slugify(FOOTER_TXT);?>"></script>
   </body>
 </html>
