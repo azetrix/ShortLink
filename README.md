@@ -9,6 +9,8 @@ Check ShortLink: https://azetrix.xyz/
 
 ~ REINVENTING THE WHEEL ~
 
+> Update: We currently have no funding to support the development of this application. We are suspending its development until further notice. This might take weeks in duration.
+
 # Features
 
 - It can create up to `15.625` billion unique URLs in 6 or less characters.
