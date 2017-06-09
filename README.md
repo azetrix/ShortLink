@@ -1,7 +1,7 @@
 # ShortLink
 [![GitHub release](https://img.shields.io/badge/style-v0.1.5-blue.svg?style=flat&label=Release)](https://github.com/azetrix/ShortLink/releases/tag/v0.1.5)
 [![AUR](https://img.shields.io/badge/style-GPL--3.0-blue.svg?style=flat&label=License)](https://github.com/azetrix/ShortLink/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/style-yes-green.svg?style=flat&label=Maintained)](https://github.com/azetrix/ShortLink)
+[![Maintenance](https://img.shields.io/badge/style-Suspended-red.svg?style=flat&label=Maintained)](https://github.com/azetrix/ShortLink)
 [![Donate](https://img.shields.io/badge/style-PayPal-green.svg?style=flat&label=Donate)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A)
 
 ShortLink is a simple URL Shortening script powered purely by PHP.
