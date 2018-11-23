@@ -1,15 +1,16 @@
 # ShortLink
-[![GitHub release](https://img.shields.io/badge/style-v0.1.5-blue.svg?style=flat&label=Release)](https://github.com/azetrix/ShortLink/releases/tag/v0.1.5)
-[![AUR](https://img.shields.io/badge/style-GPL--3.0-blue.svg?style=flat&label=License)](https://github.com/azetrix/ShortLink/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/style-Suspended-red.svg?style=flat&label=Maintained)](https://github.com/azetrix/ShortLink)
-[![Donate](https://img.shields.io/badge/style-PayPal-green.svg?style=flat&label=Donate)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A)
+[![GitHub release](https://img.shields.io/badge/Release-v0.1.5-blue.svg)](https://github.com/azetrix/ShortLink/releases/tag/v0.1.5)
+[![AUR](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://github.com/azetrix/ShortLink/blob/master/LICENSE)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7ZHJQTCW4UZ8A)
 
 ShortLink is a simple URL Shortening script powered purely by PHP.
 Check ShortLink: https://azetrix.xyz/
 
 ~ REINVENTING THE WHEEL ~
 
-> Update: We currently have no funding to support the development of this application. We are suspending its development until further notice. This might take weeks in duration.
+> Update: We currently have no funding to support the development of this application. We are suspending its development until further notice. This might take weeks in duration. (6/9/2017)
+
+> Update: The development of this project is now active. We have reconstructed everything to comply with the common modern-PHP coding practices. (11/23/2018)
 
 # Features
 
