@@ -3,15 +3,18 @@
 namespace ShortLink;
 
 use ShortLink\Tiny;
+use ShortLink\ErrorHandler;
 
 class Core
 {
 
-    private $database;
-    public $user_agent = "Undefined: User Agent";
+    private $database, $user_agent = "Undefined: User Agent";
+    public $error_handler;
 
     public function __construct(Database $database) {
         $this->database = $database; // allow this class to access the database
+        $this->error_handler = new ErrorHandler; // non mission critical errors handler
+        $this->user_agent = $_SERVER["HTTP_USER_AGENT"]; // defines the user agent all created entries
     }
 
     public function create_shortlink(string $url, string $custom_shortlink = '') { // this method decides what kind of request is made
@@ -58,7 +61,7 @@ class Core
             return $duplicate_check[0];
         } else { // else, hard fail
             //throw new \Exception("ShortLink is not available.");
-            trigger_error("ShortLink is not available.");
+            $this->error_handler->error_out("ShortLink is not available.");
             return false;
         }
     }
@@ -72,7 +75,7 @@ class Core
         }
         if (empty($data)) {
             //throw new \Exception("ShortLink does not exist.");
-            trigger_error("ShortLink does not exist.");
+            $this->error_handler->error_out("ShortLink does not exist.");
             return false;
         }
         $access_counter = intval($data[0]['counter']) + 1;
@@ -93,7 +96,7 @@ class Core
                     return true;
                 } else {
                     //throw new \Exception("Shortlink already exists in database.");
-                    trigger_error("Shortlink already exists in database.");
+                    $this->error_handler->error_out("Shortlink already exists in database.");
                     return false;
                 }
             } else {
@@ -101,7 +104,7 @@ class Core
             }
         } else {
             //throw new \Exception("Shortlink contains illegal characters.");
-            trigger_error("Shortlink contains illegal characters.");
+            $this->error_handler->error_out("Shortlink contains illegal characters.");
             return false;
         }
     }

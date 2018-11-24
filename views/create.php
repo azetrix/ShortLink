@@ -1,11 +1,12 @@
 <?php
 
 global $ShortLink;
-
 $data = $ShortLink->create_shortlink($_POST['long_url'], $_POST['shortlink']);
 
+
+print_r($arguments);
+
 if (empty($data)) {
-    echo "Shortlink is not available.";
     exit;
 }
 

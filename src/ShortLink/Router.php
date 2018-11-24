@@ -9,7 +9,7 @@ class Router
 
     private static $requested_uri;
 
-    public function __construct(array $routes, $requested_uri = null) {
+    public function __construct(array $routes, $requested_uri = null, ErrorHandler $error_handler) {
         $server_redirect_url = (isset($_SERVER["REDIRECT_URL"]) ? $_SERVER["REDIRECT_URL"] : '/');
         $server_redirect_url = (isset($_SERVER["PATH_INFO"]) ? $_SERVER["PATH_INFO"] : $server_redirect_url);
         $requested_uri = ($requested_uri !== null ? $requested_uri : $server_redirect_url);
@@ -17,7 +17,8 @@ class Router
         $arguments = [
             "requested_uri" => self::$requested_uri,
             "get_data" => $_GET,
-            "post_data" => $_POST
+            "post_data" => $_POST,
+            "_errors" => $error_handler
          ];
 
         foreach ($routes as $uri => $view) {
