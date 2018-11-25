@@ -10,7 +10,7 @@ if (empty($data)) {
     exit;
 }
 
-$shortlink_url = $data['custom_code'] ? '/r/'.urlencode($data['short_code']) : '/s/'.urlencode($data['short_code']);
+$shortlink_url = ($data['custom_code'] ? '/'.urlencode($data['short_code']) : '/s/'.urlencode($data['short_code']));
 
 ?>
 

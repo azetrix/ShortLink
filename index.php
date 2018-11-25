@@ -12,7 +12,7 @@ $routes = [
     "/" => "./views/index.php",
     "/create" => "./views/create.php",
     "/robots.txt" => "./views/robots.php",
-    "/r/{{shortlink}}" => "./views/shortlink.php",
+    "/s/{{shortlink}}" => "./views/shortlink.php",
     "/{{shortlink}}" => "./views/custom_shortlink.php"
 ];
 
