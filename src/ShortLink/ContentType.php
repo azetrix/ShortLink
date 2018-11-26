@@ -10,7 +10,8 @@ class ContentType
         $count_explode = count($idx);
         $idx = strtolower($idx[$count_explode-1]);
     
-        $mimet = array( 
+        $mimet = array(
+            // standard pages
             'txt' => 'text/plain',
             'htm' => 'text/html',
             'html' => 'text/html',

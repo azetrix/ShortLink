@@ -4,9 +4,9 @@ require "./src/autoload.php";
 
 /**
  * warning:
- * a - you always need a dedicated route and view file for the standard and custom shortlinks.
+ * a - you always need a dedicated route and a view file for the standard and custom shortlinks.
  * b - you should never declare duplicate routes. otherwise, the first match will override all other identical routes.
- * c - once used, these routes should never be changed regardless of the situation. broken links would be the consequence.
+ * c - once used, the shortlink routes should never be changed regardless of the situation. broken links would be the consequence.
  */
 $routes = [
     "/" => "./views/index.php",
@@ -16,8 +16,6 @@ $routes = [
     "/s/{{shortlink}}" => "./views/shortlink.php",
     "/{{shortlink}}" => "./views/custom_shortlink.php"
 ];
-
-
 
 // database initialization and conection establishment
 $database = new ShortLink\Database;

@@ -5,7 +5,7 @@ global $ShortLink;
 $data = $ShortLink->fetch_shortlink($arguments['shortlink'], true);
 
 if (empty($data)) {
-    echo "Not found.";
+    require 'not-found.php';
     exit;
 }
 
