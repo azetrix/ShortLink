@@ -104,7 +104,7 @@ class Router
             require $file; // require the view file for browser display
             return true;
         } else {
-            throw new \Exception("System Resource Not Found: \"$file\".");
+            throw new \Exception("System View Resource Not Found: \"$file\".");
             return false;
         }
     }
