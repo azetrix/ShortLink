@@ -11,10 +11,13 @@ require "./src/autoload.php";
 $routes = [
     "/" => "./views/index.php",
     "/create" => "./views/create.php",
-    "/robots.txt" => "./views/robots.php",
+    "/robots.txt" => "./views/robots.txt",
+    "/favicon.ico" => "./views/favicon.ico",
     "/s/{{shortlink}}" => "./views/shortlink.php",
     "/{{shortlink}}" => "./views/custom_shortlink.php"
 ];
+
+
 
 // database initialization and conection establishment
 $database = new ShortLink\Database;

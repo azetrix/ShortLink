@@ -2,6 +2,8 @@
 
 namespace ShortLink;
 
+use Shortlink\ContentType;
+
 class Router
 {
 
@@ -98,6 +100,7 @@ class Router
 
     private static function view(string $file, array $arguments = null) {
         if (file_exists($file)) {
+            header("Content-Type: " . ContentType::get_mime_type($file)); // return the appropriate content type. add new if necessary
             require $file; // require the view file for browser display
             return true;
         } else {

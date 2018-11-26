@@ -88,8 +88,7 @@ class Core
     }
 
     private function is_valid_custom_shortlink(string $shortlink, bool $check_database = false) {
-        $is_valid = preg_match('/^[a-z0-9_\-]+$/i', $shortlink);
-        if ($is_valid) {
+        if (preg_match('/^[a-z0-9_\-]+$/i', $shortlink)) { // if shortlink is valid
             if ($check_database) {
                 $database_match = $this->database->fetch(['short_code', 'custom_code'], [$shortlink, 1]);
                 if (empty($database_match)) {
