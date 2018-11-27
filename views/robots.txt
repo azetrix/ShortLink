@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /create
-Disallow: /r/
-Disallow: /s/
+Disallow: 
