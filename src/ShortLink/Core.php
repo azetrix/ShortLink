@@ -60,7 +60,6 @@ class Core
         } else if (!empty($duplicate_check)) { //  otherwise, check if the current short_code and long_url matches the request.
             return $duplicate_check[0];
         } else { // else, hard fail
-            //throw new \Exception("ShortLink is not available.");
             $this->error_handler->error_out("ShortLink is not available.");
             return false;
         }
@@ -73,8 +72,7 @@ class Core
         } else { // if standard shortlink code
             $data = $database->fetch(['short_code', 'custom_code'], [$shortlink, 0]); // fetch custom shortlink row
         }
-        if (empty($data)) {
-            //throw new \Exception("ShortLink does not exist.");
+        if (empty($data)) { // check if shortlink exists
             $this->error_handler->error_out("ShortLink does not exist.");
             return false;
         }
@@ -88,28 +86,22 @@ class Core
     }
 
     private function is_valid_custom_shortlink(string $shortlink, bool $check_database = false) {
-        if (preg_match('/^[a-z0-9_\-]+$/i', $shortlink)) { // if shortlink is valid
+        if (preg_match('/^[a-z0-9_\-]+$/i', $shortlink)) { // if shortlink is valid (contains alpha-numeric, underscore, dash characters)
             if ($check_database) {
                 $database_match = $this->database->fetch(['short_code', 'custom_code'], [$shortlink, 1]);
-                if (empty($database_match)) {
+                if (empty($database_match)) { // checks the database for a duplicate
                     return true;
                 } else {
-                    //throw new \Exception("Shortlink already exists in database.");
-                    $this->error_handler->error_out("Shortlink already exists in database.");
+                    $this->error_handler->error_out("ShortLink already exists in database."); // xoxo sad
                     return false;
                 }
             } else {
                 return true;
             }
         } else {
-            //throw new \Exception("Shortlink contains illegal characters.");
-            $this->error_handler->error_out("Shortlink contains illegal characters.");
+            $this->error_handler->error_out("ShortLink contains illegal characters.");
             return false;
         }
-    }
-
-    private function is_valid_url() {
-
     }
 
 }
