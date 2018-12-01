@@ -41,6 +41,7 @@ class Core
         }
     }
 
+    // THIS METHOD NEEDS REFACTORING
     private function create_custom_shortlink(string $url, string $custom_shortlink) {
         $database = $this->database;
         $short_code_col = $database->fetch(['short_code', 'custom_code'], [$custom_shortlink, 1]);
@@ -55,7 +56,7 @@ class Core
                             'user_agent' => $this->user_agent
                         ])[0];
             } else {
-                return false;
+                return $is_valid_sc;
             }
         } else if (!empty($duplicate_check)) { //  otherwise, check if the current short_code and long_url matches the request.
             return $duplicate_check[0];
@@ -74,7 +75,7 @@ class Core
         }
         if (empty($data)) { // check if shortlink exists
             $this->error_handler->error_out("ShortLink does not exist.");
-            return false;
+            return $data;
         }
         $access_counter = intval($data[0]['counter']) + 1;
         $data_created = $data[0]['date_created'];
