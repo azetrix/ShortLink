@@ -5,4 +5,9 @@
 
 𝓢𝓱𝓸𝓻𝓽𝓛𝓲𝓷𝓴 is a simple (yet powerful) URL Shortening script 🔥💥⚡
 
-> reinventing the wheel from scratch
+> reinventing the wheel
+
+# Features
+
+* Supports `base36` and `base62` encoding for ShortCode case-sensitivity
+* Can easily create 78-billion unique ShortCodes in `base36` encoding
